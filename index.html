@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto de Vida & Matemática Aplicada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Projeto de Vida</h1>
+        <p>Organizando objetivos futuros com o poder da matemática</p>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Por que usar a Matemática no seu Projeto de Vida?</h2>
+            <p>Sonhos sem prazos e números são apenas desejos. Quando aplicamos a matemática aplicada no nosso planejamento, transformamos metas abstratas (como comprar um notebook, fazer um intercâmbio ou abrir um negócio) em passos mensuráveis e alcançáveis.</p>
+            <div class="prazos-grid">
+                <div class="prazo-item curto">
+                    <h3>Curto Prazo</h3>
+                    <p>Até 1 ano</p>
+                </div>
+                <div class="prazo-item medio">
+                    <h3>Médio Prazo</h3>
+                    <p>De 1 a 3 anos</p>
+                </div>
+                <div class="prazo-item longo">
+                    <h3>Longo Prazo</h3>
+                    <p>Mais de 3 anos</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Simulador de Metas e Objetivos</h2>
+            <p>Insira seu objetivo e descubra quanto você precisa poupar por mês para realizá-lo.</p>
+            
+            <form id="form-meta">
+                <div class="input-group">
+                    <label for="nome-meta">Qual é o seu objetivo/sonho?</label>
+                    <input type="text" id="nome-meta" placeholder="Ex: Intercâmbio, Notebook, Faculdade" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="valor-total">Valor total estimado (R$):</label>
+                    <input type="number" id="valor-total" min="1" step="0.01" placeholder="Ex: 5000" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="tempo-meses">Em quantos meses deseja realizar?</label>
+                    <input type="number" id="tempo-meses" min="1" placeholder="Ex: 12" required>
+                </div>
+
+                <button type="submit">Calcular Planejamento</button>
+            </form>
+
+            <div id="resultado" class="hidden">
+                <h3>📊 Plano de Ação Gerado</h3>
+                <p id="res-introducao"></p>
+                <div class="resultado-destaque">
+                    <p>Você precisará poupar:</p>
+                    <span id="res-parcela">R$ 0,00 / mês</span>
+                </div>
+                <p id="res-classificacao" class="badge"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Desenvolvido para fins educacionais de Matemática Aplicada</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
